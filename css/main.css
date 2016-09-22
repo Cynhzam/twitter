@@ -5,10 +5,17 @@
 }
 textarea {
 	border-radius: 5%;
+	width: 250px;
+}
+div {
+	color: #8A2BE2;
 }
 .crimson {
 	color: #DC143C;
 }
 .cyan {
 	color: #00FFFF;
+}
+span {
+	color: #DAA520;
 }
