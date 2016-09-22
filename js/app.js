@@ -21,6 +21,14 @@ window.addEventListener("load", function() {
                 button.disabled = true;
             } else if(tamaño > maximo) {
                 button.disabled = true;
-        }
+            } else if(tamaño > 120){
+                conteo.classList.add("crimson");
+            } else {
+                conteo.classList.remove("crimson");
+            } if(tamaño > 130) {
+                conteo.classList.add("cyan");
+            } else {
+                 conteo.classList.remove("cyan");
+            }
     });
 });
