@@ -13,6 +13,8 @@ window.addEventListener("load", function() {
 	}); 
     texto.addEventListener("keyup",function(e) {
         button.disabled = false;
+        var key = e.keyCode;
+        agrandarBox (key);
         var maximo = 140;
         var tamaño = document.getElementById("texto").value.length;
         var conteo = document.getElementById("contador");
@@ -28,7 +30,17 @@ window.addEventListener("load", function() {
             } if(tamaño > 130) {
                 conteo.classList.add("cyan");
             } else {
-                 conteo.classList.remove("cyan");
+                conteo.classList.remove("cyan");
             }
     });
+    function agrandarBox(key) {
+        var texto = document.getElementById("texto");
+        if (key == 13) {     
+            texto.rows += 1;     
+        } else if(key == 8) {
+            texto.rows -= 1; 
+        } if(texto.rows < 3) {
+            texto.rows == 2;
+        }
+    }
 });
